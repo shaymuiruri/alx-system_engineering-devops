@@ -1,1 +1,1 @@
-Write a script that sets the mode of the file as the same
+ Create a script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
