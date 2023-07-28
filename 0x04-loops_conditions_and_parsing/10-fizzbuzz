@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# (FizzBuzz) Displays numbers
+#fizzbuzz stuf
 
 count=1
 while [ $count -ne 101 ]
@@ -17,3 +17,4 @@ do
 	echo $count
     fi
     ((count++))
+done
