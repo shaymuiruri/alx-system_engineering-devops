@@ -2,7 +2,5 @@
 # Displays a list of currently running processes.
 # 
 #   Must show all processes, for all users, even those which do not have a TTY
-#   Display in a user-oriented format
-#   Show process hierarchy
 
 ps -auxf
