@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Check if an argument is provided
+if [[ $# -eq 0 ]]; then
+    echo "Usage: $0 {IP_ADDRESS}"
+    exit 1
+fi
+
+# Check if the provided argument is a valid IP address
+if ! ping -c 1 -W 1 "$1" &> /dev/null; then
+    echo "Invalid IP address: $1"
+    exit 1
+fi
+
+# Ping the IP address five times
+echo "Pinging $1 five times..."
+ping -c 5 "$1"
+
