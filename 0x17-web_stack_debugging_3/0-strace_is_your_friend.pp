@@ -1,7 +1,6 @@
-# Fix an issue when Wordpress is
-# trying to initializes
+# Fix 500 error when a GET HTTP method is requested to Apache web server
 
-exec { 'fix-wordpress':
-  command => "/bin/sed -i /var/www/html/wp-settings.php \
-  -e 's/class-wp-locale.phpp/class-wp-locale.php/'"
+exec {'replace':
+  provider => shell,
+  command  => 'sed -i "s/phpp/php/g" /var/www/html/wp-settings.php'
 }
